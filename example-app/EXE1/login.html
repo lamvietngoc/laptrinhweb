@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng nhập</title>
+    <title>Quản lý người dùng</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="header-box">
-            <a href="#">Home</a> | <a href="login.html">Đăng nhập</a> | <a href="register.html">Đăng ký</a>
+    <div class="nav">Home | <a href="#">Đăng nhập</a> | <a href="#">Đăng ký</a> | <a href="#">Đăng xuất</a></div>
+    
+    <div class="container">
+        <h2>Màn hình đăng nhập</h2>
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="Username">
         </div>
-    </header>
-    <div class="wrapper">
-        
-
-        <div class="form-container">
-            <h2>Màn hình đăng nhập</h2>
-            <form>
-                <label>Username</label>
-                <input type="text" name="username" required>
-
-                <label>Mật khẩu</label>
-                <input type="password" name="password" required>
-
-                <div class="remember">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Ghi nhớ đăng nhập</label>
-                </div>
-
-                <a href="#">Quên mật khẩu</a>
-                <button type="submit">Đăng nhập</button>
-            </form>
+        <div class="form-group">
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" placeholder="Mật khẩu">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" id="remember">
+            <label for="remember">Ghi nhớ đăng nhập</label>
+        </div>
+        <div class="form-actions">
+            <a href="#">Quên mật khẩu</a>
+            <button>Đăng nhập</button>
         </div>
     </div>
-    <footer>
-        <div class="footer-box">Lập trình web @01/2024</div>
-    </footer>
+    <div class="footer">Lập trình web @01/2024</div>
+    
+    
 </body>
 </html>
