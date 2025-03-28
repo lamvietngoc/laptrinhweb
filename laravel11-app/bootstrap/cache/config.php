@@ -197,7 +197,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\framework/cache/data',
+        'path' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -370,13 +370,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\app',
+        'root' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\app/public',
+        'root' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -396,7 +396,7 @@
     ),
     'links' => 
     array (
-      'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\public\\storage' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\app/public',
+      'C:\\Users\\Litterature Forest\\laravel11-app\\public\\storage' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -435,13 +435,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -493,7 +493,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\logs/laravel.log',
+        'path' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -559,7 +559,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\resources\\views/vendor/mail',
+        0 => 'C:\\Users\\Litterature Forest\\laravel11-app\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -666,7 +666,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\framework/sessions',
+    'files' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -686,9 +686,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\resources\\views',
+      0 => 'C:\\Users\\Litterature Forest\\laravel11-app\\resources\\views',
     ),
-    'compiled' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app\\storage\\framework\\views',
+    'compiled' => 'C:\\Users\\Litterature Forest\\laravel11-app\\storage\\framework\\views',
   ),
   'flare' => 
   array (
@@ -774,7 +774,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\Users\\Litterature Forest\\.ssh\\laptrinhweb\\laravel11-app',
+    'remote_sites_path' => 'C:\\Users\\Litterature Forest\\laravel11-app',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
