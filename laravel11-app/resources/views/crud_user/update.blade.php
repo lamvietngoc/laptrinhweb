@@ -29,23 +29,26 @@
                                     <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
-                            {{-- phone Input --}}
+
+                            {{-- Like Input --}}
                             <div class="form-group mb-3">
-                                <input type="phone" placeholder="phone" id="phone_address" class="form-control form-control-lg"
-                                       value="{{ $user->phone }}" name="phone" required>
-                                @if ($errors->has('phone'))
-                                    <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                <input type="text" placeholder="like" id="like" class="form-control form-control-lg"
+                                       value="{{ $user->like }}" name="like" required>
+                                @if ($errors->has('like'))
+                                    <span class="text-danger">{{ $errors->first('like') }}</span>
                                 @endif
                             </div>
 
-                            {{-- address Input --}}
+                            {{-- Github Input --}}
                             <div class="form-group mb-3">
-                                <input type="address" placeholder="address" id="address_address" class="form-control form-control-lg"
-                                       value="{{ $user->address }}" name="address" required>
-                                @if ($errors->has('address'))
-                                    <span class="text-danger">{{ $errors->first('address') }}</span>
+                                <input type="text" placeholder="github" id="github" class="form-control form-control-lg"
+                                       value="{{ $user->github }}" name="github" required>
+                                @if ($errors->has('github'))
+                                    <span class="text-danger">{{ $errors->first('github') }}</span>
                                 @endif
                             </div>
+
+                          
                             {{-- Password Input --}}
                             <div class="form-group mb-3">
                                 <input type="password" placeholder="Password" id="password" class="form-control form-control-lg"

@@ -31,18 +31,18 @@
                                     @enderror
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="" class="form-label">Phone</label>
-                                    <input type="text" id="" class="form-control" name="phone"
-                                           value="{{ old('phone') }}" required>
-                                    @error('phone')
+                                    <label for="" class="form-label">Like</label>
+                                    <input type="text" id="" class="form-control" name="like"
+                                           value="{{ old('like') }}" required>
+                                    @error('like')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
                                 <div class="form-group mb-3">
-                                    <label for="" class="form-label">Address</label>
+                                    <label for="" class="form-label">Github</label>
                                     <input type="text" id="" class="form-control" name="address"
-                                           value="{{ old('address') }}" required>
-                                    @error('address')
+                                           value="{{ old('github') }}" required>
+                                    @error('github')
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
