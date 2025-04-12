@@ -1,34 +1,45 @@
 @extends('dashboard')
 
 @section('content')
-    <main class="login-form">
-        <div class="container">
-            <div class="row justify-content-center">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($users as $user)
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white">
+                    <h4 class="mb-0">User List</h4>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead class="table-light">
                             <tr>
-                                <th>{{ $user->id }}</th>
-                                <th>{{ $user->name }}</th>
-                                <th>{{ $user->email }}</th>
-                                <th>
-                                    <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
-                                    <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |
-                                    <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}">Delete</a>
-                                </th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>phone</th>
+                                <th>address</th>
+                                <th>Action</th>
                             </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->phone }}</td>
+                                    <td>{{ $user->address }}</td>
+                                    <td>
+                                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
+                                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 @endsection
