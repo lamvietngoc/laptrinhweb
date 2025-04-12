@@ -40,7 +40,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="" class="form-label">Github</label>
-                                    <input type="text" id="" class="form-control" name="address"
+                                    <input type="text" id="" class="form-control" name="github"
                                            value="{{ old('github') }}" required>
                                     @error('github')
                                         <small class="text-danger">{{ $message }}</small>

@@ -15,8 +15,8 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>phone</th>
-                                <th>address</th>
+                                <th>Like</th>
+                                <th>Github</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -26,8 +26,8 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->phone }}</td>
-                                    <td>{{ $user->address }}</td>
+                                    <td>{{ $user->like }}</td>
+                                    <td>{{ $user->github }}</td>
                                     <td>
                                         <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
                                         <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
