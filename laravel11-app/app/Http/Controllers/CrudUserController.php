@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
  */
 class CrudUserController extends Controller
 {
-
+    const MAX_RECORDS = 10;
     /**
      * Login page
      */
@@ -30,8 +30,6 @@ class CrudUserController extends Controller
         $request->validate([
             'email' => 'required',
             'password' => 'required',
-          
-
         ]);
 
         $credentials = $request->only('email', 'password');
@@ -60,17 +58,15 @@ class CrudUserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'like' => 'required',
-            'github' => 'required',
             'password' => 'required|min:6',
         ]);
 
         $data = $request->all();
         $check = User::create([
             'name' => $data['name'],
+//            'phone' => $data['phone'],
+//            'address' => $data['address'],
             'email' => $data['email'],
-            'like' => $data['like'],
-            'github' => $data['github'],
             'password' => Hash::make($data['password'])
         ]);
 
@@ -84,7 +80,7 @@ class CrudUserController extends Controller
         $user_id = $request->get('id');
         $user = User::find($user_id);
 
-        return view('crud_user.read', ['messi' => $user]);
+        return view('crud_user.read', ['user' => $user]);
     }
 
     /**
@@ -118,16 +114,12 @@ class CrudUserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users,id,'.$input['id'],
-            'like' => 'required',
-            'github' => 'required',
             'password' => 'required|min:6',
         ]);
 
        $user = User::find($input['id']);
        $user->name = $input['name'];
        $user->email = $input['email'];
-       $user->like = $input['like'];
-       $user->github = $input['github'];
        $user->password = $input['password'];
        $user->save();
 
@@ -139,8 +131,11 @@ class CrudUserController extends Controller
      */
     public function listUser()
     {
+
         if(Auth::check()){
-            $users = User::all();
+            $users = User::with('roles')->paginate(self::MAX_RECORDS);
+
+
             return view('crud_user.list', ['users' => $users]);
         }
 
@@ -156,4 +151,5 @@ class CrudUserController extends Controller
 
         return Redirect('login');
     }
+    
 }

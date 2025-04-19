@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\RoleController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CrudUserController;
@@ -36,3 +37,12 @@ Route::get('signout', [CrudUserController::class, 'signOut'])->name('signout');
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Roles
+Route::get('role', [RoleController::class, 'role'])->name('user.role');
+
+
+
+// Route để hiển thị danh sách người dùng theo role
+Route::get('reads', [RoleController::class, 'readRole'])->name('user.readRole');
+

@@ -1,22 +1,17 @@
 @extends('dashboard')
 
 @section('content')
-<main class="container my-5">
-    <div class="row justify-content-center">
-        <div class="col-12">
-            <div class="card shadow-sm">
-                <div class="card-header bg-dark text-white">
-                    <h4 class="mb-0">User List</h4>
-                </div>
-                <div class="card-body">
-                    <table class="table table-bordered table-striped table-hover">
-                        <thead class="table-light">
+    <main class="login-form">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Like</th>
-                                <th>Github</th>
+                                <th>Roles</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -26,20 +21,25 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->like }}</td>
-                                    <td>{{ $user->github }}</td>
                                     <td>
-                                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-info btn-sm">View</a>
-                                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                                    @foreach($user->roles as $role)
+                                        <a href="{{ route('user.role', ['id' => $role->id]) }}">
+                                            {{ $role->name . '-' }}
+                                        </a>
+                                    @endforeach
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('user.readUser', ['id' => $user->id]) }}" class="btn btn-sm btn-primary">View</a> |
+                                        <a href="{{ route('user.updateUser', ['id' => $user->id]) }}" class="btn btn-sm btn-warning">Edit</a> |
+                                        <a href="{{ route('user.deleteUser', ['id' => $user->id]) }}" class="btn btn-sm btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    {!! $users->withQueryString()->links('pagination::bootstrap-5') !!}
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 @endsection

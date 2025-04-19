@@ -30,23 +30,6 @@
                                         <small class="text-danger">{{ $message }}</small>
                                     @enderror
                                 </div>
-                                <div class="form-group mb-3">
-                                    <label for="" class="form-label">Like</label>
-                                    <input type="text" id="" class="form-control" name="like"
-                                           value="{{ old('like') }}" required>
-                                    @error('like')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                <div class="form-group mb-3">
-                                    <label for="" class="form-label">Github</label>
-                                    <input type="text" id="" class="form-control" name="github"
-                                           value="{{ old('github') }}" required>
-                                    @error('github')
-                                        <small class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                </div>
-                                
 
                                 <div class="form-group mb-4">
                                     <label for="password" class="form-label">Password</label>
